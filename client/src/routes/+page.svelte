@@ -7,7 +7,9 @@
 
   async function fetchAllNews() {
     try {
-      const response = await fetch("http://127.0.0.1:3000/getAllNews");
+      const response = await fetch(
+        "https://news-board-mockup-api.vercel.app/getAllNews"
+      );
       if (response.ok) {
         const newsArray = await response.json();
         newsList = newsArray.map((news) => news.rawHTML);
@@ -29,13 +31,16 @@
     postNews();
     const content = document.getElementById("editable-div").innerHTML;
     try {
-      const response = await fetch("http://127.0.0.1:3000/addNews", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ innerHTML: content }),
-      });
+      const response = await fetch(
+        "https://news-board-mockup-api.vercel.app/addNews",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ innerHTML: content }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
