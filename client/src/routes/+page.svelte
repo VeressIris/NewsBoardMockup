@@ -3,23 +3,8 @@
   import NewsElement from "../components/newsElement.svelte";
   import { onMount } from "svelte";
 
-  let newsList = [];
-
-  async function fetchAllNews() {
-    try {
-      const response = await fetch(
-        "https://news-board-mockup-api.vercel.app/getAllNews"
-      );
-      if (response.ok) {
-        const newsArray = await response.json();
-        newsList = newsArray.map((news) => news.rawHTML);
-      } else {
-        console.error("Failed to fetch news");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  }
+  export let data;
+  let newsList = data.newsList || [];
 
   function postNews() {
     const content = document.getElementById("editable-div").innerHTML;
@@ -53,18 +38,20 @@
       alert("Failed to add news");
     }
   }
-
-  onMount(() => {
-    fetchAllNews();
-  });
 </script>
 
 <div class="main">
   <h1>News:</h1>
   <div id="news-list">
-    {#each newsList as newsItem}
-      <NewsElement htmlContent={newsItem} />
-    {/each}
+    {#await data}
+      <p>Loading...</p>
+    {:then data}
+      {#each newsList as newsItem}
+        <NewsElement htmlContent={newsItem} />
+      {/each}
+    {:catch error}
+      <p>Error loading news</p>
+    {/await}
   </div>
   <TextEditor />
   <button on:click={addNewsToDB} id="post-bttn">Post</button>
