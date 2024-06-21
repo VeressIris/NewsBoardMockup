@@ -17,12 +17,6 @@
     document.execCommand("foreColor", false, selectedColor);
   }
 
-  let fontSize = 16;
-  function changeFontSize() {
-    let editableDiv = document.getElementById("editable-div");
-    editableDiv.style.fontSize = fontSize + "px";
-  }
-
   function indent() {
     document.execCommand("indent");
   }
@@ -55,19 +49,16 @@
   function rightAlign() {
     document.execCommand("justifyRight");
   }
+
+  function insertLink() {
+    const url = window.getSelection().toString();
+    console.log(url);
+    document.execCommand("createLink", false, url);
+  }
 </script>
 
 <div>
   <div class="buttons-container">
-    <input
-      bind:value={fontSize}
-      on:input={changeFontSize}
-      id="font-size"
-      type="number"
-      min="1"
-      max="160"
-      style="height: 27px"
-    />
     <button on:click={bold} id="bold-bttn"><b>B</b></button>
     <button on:click={italicize} id="italic-bttn"><i>I</i></button>
     <button on:click={underline} id="underline-bttn"><u>U</u></button>
@@ -90,6 +81,7 @@
       id="insert-number-list"
       style="font-weight:bold">1.</button
     >
+    <button on:click={insertLink}>link</button>
     <button on:click={indent} id="indent" style="font-size:larger; height: 28px"
       >→</button
     >
