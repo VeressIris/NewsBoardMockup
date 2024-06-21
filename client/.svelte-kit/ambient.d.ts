@@ -29,6 +29,7 @@ declare module '$env/static/private' {
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
+	export const CHROME_RESTART: string;
 	export const cl: string;
 	export const COLOR: string;
 	export const COLORTERM: string;
@@ -147,6 +148,7 @@ declare module '$env/dynamic/private' {
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
+		CHROME_RESTART: string;
 		cl: string;
 		COLOR: string;
 		COLORTERM: string;

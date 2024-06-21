@@ -123,10 +123,6 @@
     border: none;
     margin: 0 3px;
   }
-  #font-size {
-    width: 40px;
-    padding-left: 10px;
-  }
   #editable-div {
     font-size: 16px;
     padding: 10px;
