@@ -1,5 +1,5 @@
 {
 	"/": [
-		"src/routes/+page.server.js"
+		"src/routes/+page.js"
 	]
 }

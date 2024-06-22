@@ -26,11 +26,11 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const ACSvcPort: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
-	export const CHROME_RESTART: string;
-	export const cl: string;
+	export const CLion: string;
 	export const COLOR: string;
 	export const COLORTERM: string;
 	export const CommonProgramFiles: string;
@@ -39,20 +39,21 @@ declare module '$env/static/private' {
 	export const ComSpec: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_9280: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
+	export const ESET_OPTIONS: string;
 	export const GIT_ASKPASS: string;
+	export const GIT_LFS_PATH: string;
 	export const GoLand: string;
 	export const GOPATH: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
 	export const INIT_CWD: string;
+	export const INTEL_DEV_REDIST: string;
+	export const JAVA_HOME: string;
 	export const LANG: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
-	export const Ninja: string;
+	export const MIC_LD_LIBRARY_PATH: string;
 	export const NODE: string;
 	export const NODE_ENV: string;
 	export const NODE_EXE: string;
@@ -95,6 +96,10 @@ declare module '$env/static/private' {
 	export const PROMPT: string;
 	export const PSModulePath: string;
 	export const PUBLIC: string;
+	export const QT_SCALE_FACTOR_ROUNDING_POLICY: string;
+	export const RG_GPU_FRAMEWORK_ENGINE_RESOURCEDIR: string;
+	export const RlsSvcPort: string;
+	export const RustRover: string;
 	export const SESSIONNAME: string;
 	export const SystemDrive: string;
 	export const SystemRoot: string;
@@ -106,13 +111,13 @@ declare module '$env/static/private' {
 	export const USERDOMAIN_ROAMINGPROFILE: string;
 	export const USERNAME: string;
 	export const USERPROFILE: string;
+	export const VBOX_HWVIRTEX_IGNORE_SVM_IN_USE: string;
 	export const VBOX_MSI_INSTALL_PATH: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const VSCODE_INJECTION: string;
-	export const VSCODE_NONCE: string;
 	export const windir: string;
 }
 
@@ -145,11 +150,11 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		ACSvcPort: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
-		CHROME_RESTART: string;
-		cl: string;
+		CLion: string;
 		COLOR: string;
 		COLORTERM: string;
 		CommonProgramFiles: string;
@@ -158,20 +163,21 @@ declare module '$env/dynamic/private' {
 		ComSpec: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_9280: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
+		ESET_OPTIONS: string;
 		GIT_ASKPASS: string;
+		GIT_LFS_PATH: string;
 		GoLand: string;
 		GOPATH: string;
 		HOME: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
 		INIT_CWD: string;
+		INTEL_DEV_REDIST: string;
+		JAVA_HOME: string;
 		LANG: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
-		Ninja: string;
+		MIC_LD_LIBRARY_PATH: string;
 		NODE: string;
 		NODE_ENV: string;
 		NODE_EXE: string;
@@ -214,6 +220,10 @@ declare module '$env/dynamic/private' {
 		PROMPT: string;
 		PSModulePath: string;
 		PUBLIC: string;
+		QT_SCALE_FACTOR_ROUNDING_POLICY: string;
+		RG_GPU_FRAMEWORK_ENGINE_RESOURCEDIR: string;
+		RlsSvcPort: string;
+		RustRover: string;
 		SESSIONNAME: string;
 		SystemDrive: string;
 		SystemRoot: string;
@@ -225,13 +235,13 @@ declare module '$env/dynamic/private' {
 		USERDOMAIN_ROAMINGPROFILE: string;
 		USERNAME: string;
 		USERPROFILE: string;
+		VBOX_HWVIRTEX_IGNORE_SVM_IN_USE: string;
 		VBOX_MSI_INSTALL_PATH: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		VSCODE_INJECTION: string;
-		VSCODE_NONCE: string;
 		windir: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;

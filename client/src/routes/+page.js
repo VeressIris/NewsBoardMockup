@@ -1,8 +1,6 @@
-// @ts-nocheck
-import { error } from "@sveltejs/kit";
-/** */
+/** @type {import('./$types').PageLoad} */
 
-export async function load() {
+export async function load({ fetch }) {
   const response = await fetch(
     "https://news-board-mockup-api.vercel.app/getAllNews"
   );
